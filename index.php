@@ -1,3 +1,16 @@
+<?php
+
+require_once 'app/config/config.php';
+require_once 'app/modules/hg-api.php';
+
+$hg = new HG_API(HG_API_KEY);
+
+$dolar = $hg->dolar_quotation();
+
+var_dump($dolar);
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
